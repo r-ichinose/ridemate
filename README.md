@@ -1,24 +1,44 @@
-# README
+アプリケーション名
+Ride Mate
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+アプリケーションの概要
+スノーボードの手入れとか点検を忘れるのでその日の点検や手入れの通知をしてくれる
 
-Things you may want to cover:
+URL
 
-* Ruby version
 
-* System dependencies
+テスト用アカウント
+・Basic認証ID：ridemate
+・Basic認証パスワード：1126
+・メールアドレス：aaa@aaa
+・パスワード：a111111
 
-* Configuration
+利用方法
+目標投稿
 
-* Database creation
 
-* Database initialization
+アプリケーションの作成した背景
 
-* How to run the test suite
 
-* Services (job queues, cache servers, search engines, etc.)
+洗い出した要件
 
-* Deployment instructions
 
-* ...
+実装した機能についての画像やGIFおよびその説明
+
+
+実装予定の機能
+
+
+データベース設計
+
+
+画面遷移図
+
+
+開発環境
+
+
+ローカルでの動作方法
+
+
+工夫ポイント
