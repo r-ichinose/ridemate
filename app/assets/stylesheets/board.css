@@ -1,21 +1,44 @@
 .wrapper {
   display: flex;
 }
-.fooder {
+.side-bar {
   background-color: #90bffd;
   width: 300px;
   height: 100vh;
 }
-.fooder-header {
+.side-bar-header {
   height: 100px;
   padding: 0 20px;
+  background-color: #253141;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
+
+.header-name a{
+  font-size: 16px;
+  color: #FAFAFA;
+  text-decoration: none;
+}
+
+.create-room a {
+  font-size: 20px;
+  border: 1px solid lightblue;
+  padding: 18px;
+  color: deepskyblue;
+  text-decoration: none;
+}
+
 .rooms {
   background-color: #a5c7f4;
   height: calc(100vh - 100px);
   padding: 0 20px;
 }
-.header {
+.main-bar {
   background-color: #FFFFFF;
   width: calc(100vw - 300px);
+}
+
+.main-bar-area {
+  background-color: #FAFAFA;
 }
