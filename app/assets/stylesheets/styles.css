@@ -28,6 +28,13 @@ body {
   display: flex;
   justify-content: center;
   gap: 30px;
+  flex-wrap: wrap; /* ボタンが画面幅に収まらない場合に改行 */
+}
+
+.user_nav {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
 }
 
 .button {

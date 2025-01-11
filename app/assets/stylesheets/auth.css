@@ -1,0 +1,108 @@
+body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f8f9fa; /* 背景色を統一 */
+}
+
+/* コンテナのスタイル */
+.container {
+  text-align: center;
+  background: #ffffff; /* 背景を白に */
+  padding: 50px;
+  border: 1px solid #ddd;
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+  border-radius: 12px;
+  max-width: 800px;
+  width: 100%;
+}
+
+/* 見出しのスタイル */
+.container h2 {
+  font-size: 2rem;
+  color: #333333;
+  margin-bottom: 30px;
+}
+
+/* フォームのフィールド */
+.field {
+  margin-bottom: 25px;
+  text-align: left;
+}
+
+.field label {
+  display: block;
+  font-weight: bold;
+  font-size: 1rem;
+  color: #555555;
+  margin-bottom: 8px;
+}
+
+.field input[type="text"],
+.field input[type="email"],
+.field input[type="password"] {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+  box-sizing: border-box;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.field input[type="text"]:focus,
+.field input[type="email"]:focus,
+.field input[type="password"]:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+/* エラーメッセージ */
+#error_explanation {
+  margin-bottom: 20px;
+  padding: 15px;
+  background-color: #ffffff; /* 背景を白に */
+  color: #721c24; /* 赤い文字 */
+  border: 2px solid #f5c6cb;
+  border-radius: 5px;
+  font-size: 1rem;
+  line-height: 1.5;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+#error_explanation h2 {
+  font-size: 1.25rem;
+  margin-bottom: 10px;
+  font-weight: bold;
+  color: #721c24;
+}
+
+#error_explanation ul {
+  margin: 0;
+  padding-left: 20px;
+}
+
+#error_explanation li {
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+/* ボタンのスタイル */
+.actions input[type="submit"] {
+  padding: 15px 30px;
+  font-size: 1.25rem;
+  color: #ffffff;
+  background-color: #007bff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.actions input[type="submit"]:hover {
+  background-color: #0056b3;
+  transform: scale(1.02);
+}
