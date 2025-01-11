@@ -1,9 +1,15 @@
 <body>
   <div class="container">
     <div class="title">Ride Mate</div>
-    <div class="buttons">
-        <a href="/login" class="button">ログイン</a>
-        <a href="/signup" class="button">新規登録</a>
-    </div>
+    <% if user_signed_in? %>
+      <div class="user_nav">
+        <%= link_to "ログアウト", destroy_user_session_path, data: { turbo_method: :delete }, class: "button" %>
+      </div>
+    <% else %>
+      <div class="buttons">
+        <%= link_to "ログイン", new_user_session_path, class: "button" %>
+        <%= link_to "新規登録", new_user_registration_path, class: "button" %>
+      </div>
+    <% end %>
   </div>
 </body>
