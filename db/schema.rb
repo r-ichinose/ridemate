@@ -10,7 +10,19 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2025_01_10_134649) do
+ActiveRecord::Schema[7.0].define(version: 2025_01_12_143119) do
+  create_table "boards", charset: "utf8mb3", force: :cascade do |t|
+    t.string "model", null: false
+    t.string "brand", null: false
+    t.string "condition", null: false
+    t.string "style", null: false
+    t.date "purchase", null: false
+    t.integer "length", null: false
+    t.integer "price", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "users", charset: "utf8mb3", force: :cascade do |t|
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
