@@ -10,7 +10,7 @@ class CreateBoards < ActiveRecord::Migration[7.0]
       t.date    :purchase,       null: false
       t.integer :length,         null: false
       t.integer :price,          null: false
-
+      t.references :user,        null: false, foreign_key: true
 
       t.timestamps
     end

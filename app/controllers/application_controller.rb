@@ -2,6 +2,19 @@ class ApplicationController < ActionController::Base
   before_action :basic_auth
   before_action :configure_permitted_parameters, if: :devise_controller?
 
+  protected
+
+  # ログイン後のリダイレクト先
+  def after_sign_in_path_for(resource)
+    boards_path # 一覧画面にリダイレクト
+  end
+
+  # 新規登録後のリダイレクト先
+  def after_sign_up_path_for(resource)
+    boards_path # 一覧画面にリダイレクト
+  end
+
+
 
   private
 

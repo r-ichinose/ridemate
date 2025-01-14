@@ -1,11 +1,6 @@
 <div class="side-bar-header">
-  <div class="header-name">
-    <a href="#">マイページ</a>
+  <div class="side-bar-menu">
+    <%= link_to "ボード登録", new_board_path, class: "button" %>
+    <%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: "button logout-button" %>
   </div>
-  <div class="create-room">
-    <a href="#">ボード登録</a>
-  </div>
-</div>
-
-<div class="rooms">
 </div>

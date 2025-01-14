@@ -1,6 +1,7 @@
 class Board < ApplicationRecord
   extend ActiveHash::Associations::ActiveRecordExtensions
-
+  belongs_to :user
+  
   belongs_to_active_hash :condition
   belongs_to_active_hash :style
   belongs_to_active_hash :shape
