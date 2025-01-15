@@ -48,35 +48,51 @@
 }
 
 .logout-button {
-  background-color: var(--danger-color); 
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #ff6b6b; /* 背景色: 赤 */
+  color: white; /* 文字色: 白 */
+  text-decoration: none; /* 下線を削除 */
+  border-radius: 5px; /* 角を丸くする */
+  font-size: 14px; /* フォントサイズ */
+  font-weight: bold; /* 太字 */
+  cursor: pointer; /* カーソルをポインターに変更 */
+  border: none; /* 枠線を削除 */
 }
 
 .logout-button:hover {
-  background-color: darken(var(--danger-color), 10%);
+  background-color: #ff4c4c; /* ホバー時の背景色 */
 }
 
 .main-content {
-  flex: 1; 
+  flex: 1;
   background-color: var(--background-light);
   padding: 24px;
   overflow-y: auto;
   text-align: left;
+  max-width: 1200px; /* コンテンツの最大幅を指定 */
+  margin: 0 auto; /* 左右の中央揃え */
 }
 
 .rooms {
   display: flex;
-  flex-wrap: wrap;
-  gap: 24px; 
+  flex-wrap: wrap; /* 子要素を折り返し可能にする */
+  gap: 24px; /* 子要素間のスペース */
   padding: 20px;
+  justify-content: center; /* 子要素を横方向で中央揃え */
+  align-items: flex-start; /* 子要素を上揃え */
+  margin: 0 auto; /* 全体を中央揃え */
 }
 
 .room {
   background-color: #ffffff;
-  border: 1px solid var(--border-color); 
-  border-radius: 8px; 
-  padding: 20px; 
-  width: 260px; 
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  padding: 20px;
+  width: 300px; /* カード幅を広げる */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin: 0 auto; /* 横方向の中央揃え */
+  text-align: center; /* テキストを中央揃え */
   transition: transform 0.2s, box-shadow 0.2s;
 }
 

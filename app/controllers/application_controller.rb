@@ -4,6 +4,10 @@ class ApplicationController < ActionController::Base
 
   protected
 
+  def after_sign_out_path_for(resource_or_scope)
+    root_path # ログアウト後にホーム画面にリダイレクト
+  end
+
   # ログイン後のリダイレクト先
   def after_sign_in_path_for(resource)
     boards_path # 一覧画面にリダイレクト

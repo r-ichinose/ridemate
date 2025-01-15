@@ -1,5 +1,6 @@
 <div class="board-form-container">
   <h1>ボード登録</h1>
+  <%= render "shared/error_messages", object: @board %>
   <%= form_with model: @board, local: true do |f| %>
     <!-- モデル名 -->
     <div class="form-group">
