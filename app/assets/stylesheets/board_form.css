@@ -1,0 +1,49 @@
+.board-form-container {
+  max-width: 800px; /* 最大幅を広げる */
+  margin: 50px auto; /* 画面中央に配置 */
+  padding: 30px; /* 内側の余白を増やす */
+  background-color: #ffffff;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* ラベル */
+.board-form-container label {
+  display: block;
+  font-size: 14px;
+  color: var(--text-dark);
+  margin-bottom: 8px;
+  font-weight: bold;
+}
+
+/* 入力フィールド */
+.board-form-container input[type="text"],
+.board-form-container input[type="number"],
+.board-form-container input[type="date"],
+.board-form-container select {
+  width: 100%;
+  padding: 10px;
+  font-size: 14px;
+  color: var(--text-dark);
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  margin-bottom: 16px;
+  background-color: #f9f9f9;
+}
+
+/* 円記号付きの値段フィールド */
+.price-input-wrapper {
+  display: flex;
+  align-items: center;
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  background-color: #f9f9f9;
+  padding: 0 10px;
+}
+
+.price-input-wrapper span {
+  font-size: 14px;
+  color: var(--text-dark);
+  margin-right: 8px;
+}

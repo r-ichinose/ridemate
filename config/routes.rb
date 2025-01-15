@@ -1,10 +1,6 @@
 Rails.application.routes.draw do
   devise_for :users
-  get 'board/index'
+  root to: "mainboard#index"
+  resources :boards, only: [:index, :new, :create, :edit, :update, :show, :destroy]
   get '/home', to: 'mainboard#index'
-  # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
-
-  # Defines the root path route ("/")
-  # root "articles#index"
-  root to: "board#index"
 end

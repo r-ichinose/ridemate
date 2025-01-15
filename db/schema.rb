@@ -14,13 +14,17 @@ ActiveRecord::Schema[7.0].define(version: 2025_01_12_143119) do
   create_table "boards", charset: "utf8mb3", force: :cascade do |t|
     t.string "model", null: false
     t.string "brand", null: false
-    t.string "condition", null: false
-    t.string "style", null: false
+    t.integer "condition_id", null: false
+    t.integer "style_id", null: false
+    t.integer "shape_id", null: false
+    t.integer "camber_id", null: false
     t.date "purchase", null: false
     t.integer "length", null: false
     t.integer "price", null: false
+    t.bigint "user_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_boards_on_user_id"
   end
 
   create_table "users", charset: "utf8mb3", force: :cascade do |t|
@@ -36,4 +40,5 @@ ActiveRecord::Schema[7.0].define(version: 2025_01_12_143119) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "boards", "users"
 end

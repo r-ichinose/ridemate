@@ -1,0 +1,62 @@
+<div class="board-form-container">
+  <h1>ボード登録</h1>
+  <%= render "shared/error_messages", object: @board %>
+  <%= form_with model: @board, local: true do |f| %>
+    <!-- モデル名 -->
+    <div class="form-group">
+      <%= f.label :model, 'モデル名' %>
+      <%= f.text_field :model, placeholder: 'モデル名を入力してください', class: 'form-control' %>
+    </div>
+
+    <!-- メーカー -->
+    <div class="form-group">
+      <%= f.label :brand, 'メーカー' %>
+      <%= f.text_field :brand, placeholder: 'メーカー名を入力してください', class: 'form-control' %>
+    </div>
+
+    <!-- 状態 -->
+    <div class="form-group">
+      <%= f.label :condition_id, '状態' %>
+      <%= f.collection_select :condition_id, Condition.all, :id, :name, { prompt: '選択してください' }, class: 'form-control' %>
+    </div>
+
+    <!-- スタイル -->
+    <div class="form-group">
+      <%= f.label :style_id, 'スタイル' %>
+      <%= f.collection_select :style_id, Style.all, :id, :name, { prompt: '選択してください' }, class: 'form-control' %>
+    </div>
+
+    <!-- シェイプ -->
+    <div class="form-group">
+      <%= f.label :shape_id, 'シェイプ' %>
+      <%= f.collection_select :shape_id, Shape.all, :id, :name, { prompt: '選択してください' }, class: 'form-control' %>
+    </div>
+
+    <!-- キャンバー -->
+    <div class="form-group">
+      <%= f.label :camber_id, 'キャンバー' %>
+      <%= f.collection_select :camber_id, Camber.all, :id, :name, { prompt: '選択してください' }, class: 'form-control' %>
+    </div>
+
+    <!-- 購入日 -->
+    <div class="form-group">
+      <%= f.label :purchase, '購入日' %>
+      <%= f.date_field :purchase, class: 'form-control' %>
+    </div>
+
+    <!-- 長さ -->
+    <div class="form-group">
+      <%= f.label :length, '長さ (cm)' %>
+      <%= f.number_field :length, step: 0.1, placeholder: '例: 155.5', class: 'form-control' %>
+    </div>
+
+    <!-- 値段 -->
+    <div class="form-group">
+      <%= f.label :price, '値段 (円)' %>
+      <%= f.number_field :price, step: 0.01, placeholder: '例: 80000', class: 'form-control' %>
+    </div>
+
+    <!-- 登録ボタン -->
+    <%= f.submit '登録する', class: 'button' %>
+  <% end %>
+</div>
