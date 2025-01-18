@@ -124,3 +124,19 @@
   background-color: var(--secondary-color);
   transform: scale(1.05);
 }
+
+.board-maintenance-btn {
+  background-color: #1D4ED8; /* 青色 */
+  color: #FFFFFF; /* 白文字 */
+  font-weight: bold; /* 太字 */
+  padding: 10px 20px; /* 余白 */
+  border-radius: 8px; /* 角丸 */
+  margin-top: 10px; /* 上の要素との間隔 */
+  border: none; /* ボーダーを削除 */
+  cursor: pointer; /* ホバー時にポインター表示 */
+  transition: background-color 0.3s ease; /* 背景色の変化を滑らかに */
+}
+
+.board-maintenance-btn:hover {
+  background-color: #2563EB; /* ホバー時に少し濃い青色 */
+}
