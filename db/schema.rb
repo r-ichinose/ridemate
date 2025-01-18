@@ -10,7 +10,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2025_01_12_143119) do
+ActiveRecord::Schema[7.0].define(version: 2025_01_18_075709) do
+  create_table "board_maintenances", charset: "utf8mb3", force: :cascade do |t|
+    t.bigint "board_id", null: false
+    t.date "maintenance_date", null: false
+    t.text "content", null: false
+    t.boolean "notification", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["board_id"], name: "index_board_maintenances_on_board_id"
+  end
+
   create_table "boards", charset: "utf8mb3", force: :cascade do |t|
     t.string "model", null: false
     t.string "brand", null: false
@@ -40,5 +50,6 @@ ActiveRecord::Schema[7.0].define(version: 2025_01_12_143119) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "board_maintenances", "boards"
   add_foreign_key "boards", "users"
 end
