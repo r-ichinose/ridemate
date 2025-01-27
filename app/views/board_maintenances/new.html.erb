@@ -1,0 +1,50 @@
+<div class="board-maintenance-page">
+  <h1>ボードメンテナンス管理</h1>
+
+  <!-- メンテナンス履歴 -->
+  <h2>メンテナンス履歴</h2>
+  <% if @board_maintenances.present? %>
+    <ul class="maintenance-history">
+      <% @board_maintenances.each do |maintenance| %>
+        <li>
+          <p>日付: <%= maintenance.maintenance_date.strftime('%Y年%m月%d日') %></p>
+          <p>内容: <%= maintenance.content %></p>
+          <p>
+            通知: 
+            <% if maintenance.notification %>
+              ✅ 通知あり
+            <% else %>
+              ❌ 通知なし
+            <% end %>
+          </p>
+        </li>
+      <% end %>
+    </ul>
+  <% else %>
+    <p class="no-maintenance">メンテナンス履歴がありません</p>
+  <% end %>
+
+  <!-- 新しいメンテナンス通知フォーム -->
+  <h2>新しいメンテナンスを追加</h2>
+  <%= render "shared/error_messages", object: @board_maintenance %>
+  <%= form_with model: [@board, @board_maintenance], local: true, class: 'maintenance-form' do |f| %>
+    <div class="form-group">
+      <%= f.label :maintenance_date, 'メンテナンス日' %>
+      <%= f.date_field :maintenance_date, class: 'form-control' %>
+    </div>
+
+    <div class="form-group">
+      <%= f.label :content, 'メンテナンス内容' %>
+      <%= f.text_area :content, rows: 3, class: 'form-control' %>
+    </div>
+
+    <div class="form-group">
+      <%= f.label :notification, '通知を設定する' %>
+      <%= f.check_box :notification, class: 'form-check' %>
+    </div>
+
+    <div class="form-group">
+      <%= f.submit '保存', class: 'btn btn-primary' %>
+    </div>
+  <% end %>
+</div>
