@@ -11,7 +11,7 @@
           <p><strong>購入日:</strong> <%= board.purchase.strftime('%Y年%m月%d日') if board.purchase %></p>
           <p><strong>長さ:</strong> <%= board.length %> cm</p>
           <p><strong>値段:</strong> ¥<%= number_with_delimiter(board.price) %></p>
-          <%= link_to 'ボードメンテナンス', new_board_maintenance_path, class: 'board-maintenance-btn' %>
+          <%= link_to 'ボードメンテナンス', new_board_board_maintenance_path(board), class: 'board-maintenance-btn' %>
         </div>
       <% end %>
     <% else %>

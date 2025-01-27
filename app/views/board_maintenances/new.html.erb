@@ -26,6 +26,7 @@
 
   <!-- 新しいメンテナンス通知フォーム -->
   <h2>新しいメンテナンスを追加</h2>
+  <%= render "shared/error_messages", object: @board_maintenance %>
   <%= form_with model: [@board, @board_maintenance], local: true, class: 'maintenance-form' do |f| %>
     <div class="form-group">
       <%= f.label :maintenance_date, 'メンテナンス日' %>

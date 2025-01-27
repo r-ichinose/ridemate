@@ -15,7 +15,7 @@ ActiveRecord::Schema[7.0].define(version: 2025_01_18_075709) do
     t.bigint "board_id", null: false
     t.date "maintenance_date", null: false
     t.text "content", null: false
-    t.boolean "notification", null: false
+    t.boolean "notification", default: false, null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["board_id"], name: "index_board_maintenances_on_board_id"
